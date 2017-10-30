@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+    <image class="topic-banner" src="../../images/topic-banner2.jpg"></image>
+    <view class="flex-flow goods-wrap">
+       <view class="goods-list">
+           <image class="goods-img" src="../../images/topic-goods1.jpg"></image>
+           <view class="goods-title">这里显示产品标题</view>
+           <view class="goods-tips">显示副标题内容</view>
+           <text class="goods-price">￥298</text>
+       </view>
+       <view class="goods-list">
+           <image class="goods-img" src="../../images/topic-goods2.jpg"></image>
+           <view class="goods-title">这里显示产品标题</view>
+           <view class="goods-tips">显示副标题内容</view>
+           <text class="goods-price">￥298</text>
+       </view>
+       <view class="goods-list">
+           <image class="goods-img" src="../../images/topic-goods3.jpg"></image>
+           <view class="goods-title">这里显示产品标题</view>
+           <view class="goods-tips">显示副标题内容</view>
+           <text class="goods-price">￥298</text>
+       </view>
+       <view class="goods-list">
+           <image class="goods-img" src="../../images/topic-goods4.jpg"></image>
+           <view class="goods-title">这里显示产品标题</view>
+           <view class="goods-tips">显示副标题内容</view>
+           <text class="goods-price">￥298</text>
+       </view>
+    </view>
+    <view class="load">—— 别拉了见底了 ——</view>
+</view>

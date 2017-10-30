@@ -1,0 +1,32 @@
+.scroll-del{font-size: 0;height:240rpx;white-space: nowrap;background: #fff;}
+.address-main{width:750rpx;padding: 38rpx 0 0  25rpx;}
+.address-main icon{margin-right:28rpx;}
+.info{padding-bottom:38rpx;padding-right:25rpx;border-bottom: 1px solid #dfdfdf;}
+.del{display:inline-block;vertical-align: top;width:190rpx;background: #000;height:100%;line-height:240rpx;text-align: center;}
+.del image{width:49rpx;height:47rpx;}
+.address-list{display:inline-block;vertical-align: top;}
+.goods-img{width:160rpx;height:160rpx;margin-right:20rpx;}
+.address-main{width:750rpx;}
+.info-name{font-size: 26rpx;}
+.info-description{margin:8rpx 0 22rpx;font-size: 22rpx;color: #a1a1a1;}
+.price{font-size: 28rpx;}
+.price text{float: left;margin-top:10rpx;color:#fd001e;}
+.input{float: right;width:210rpx;height:60rpx;border-radius:3px;border:1px solid #dfdfdf;}
+.input view{width:70rpx;height:100%;text-align: center;line-height: 58rpx;}
+.input view:first-child{border-right:1px solid #dfdfdf;}
+.input view:last-child{border-left:1px solid #dfdfdf;}
+.input input{width:70rpx;text-align: center;}
+.fixed{position:fixed;bottom:0;left:0;width:100%;padding-left:25rpx;height:90rpx;background:#fff;}
+.total-price {margin-right:30rpx;}
+.total-price text{color:#fd001e;}
+.settlement{width:240rpx;height:90rpx;line-height:90rpx;background: #fd001e;color:#fff;text-align: center;}
+.all-select text,.all-select icon{display: inline-block;vertical-align: middle;}
+.all-select icon{margin-right:18rpx;}
+.scroll-del:last-child .info{border-bottom:0;}
+.fix{height:180rpx;}
+.shopping-tips{text-align:center;padding-top:152rpx;}
+.shopping-tips image{width:263rpx;height:192rpx;margin-bottom:80rpx;}
+.shopping-tips view{color:#666;text-align:center;font-size:32rpx;line-height:1.5;}
+.shop-btn{margin-bottom:60rpx;}
+.shopping-tips navigator{display:inline-block;width:73%;height:90rpx;line-height:90rpx;border-radius:25px;color:#ef473a;border:1px solid #ef473a;}
+.shopping-tips navigator:active{background:#ef473a;color:#fff;}

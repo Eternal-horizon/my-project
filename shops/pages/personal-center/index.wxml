@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="flex-justify info-main">
+    <view class="info">
+      <view>{{userinfo.nickName}}</view>
+      <text>密盾midun商城欢迎您</text>
+    </view>
+    <view class="user" style="background-image:url('{{userinfo.avatarUrl}}')"></view>
+  </view>
+  <view class="link-nav">
+    <navigator url="../my-order/index" class="flex nav-list order">
+      <image src="../../images/my-order.png"></image>
+      <view class="flex-1">我的订单</view>
+    </navigator>
+    <block wx:if="{{no_address}}">
+      <navigator url="../no-address/index" class="flex nav-list">
+        <image src="../../images/address.png" class="address"></image>
+        <view class="flex-1">地址管理</view>
+      </navigator>
+    </block>
+    <block wx:if="{{!no_address}}">
+      <navigator url="../manage-address/index" class="flex nav-list">
+        <image src="../../images/address.png" class="address"></image>
+        <view class="flex-1">地址管理</view>
+      </navigator>
+    </block>
+  </view>
+  <view class="link-nav my-order">
+    <button class="flex nav-list" open-type="contact">
+      <image src="../../images/contact.png"></image>
+      <view class="flex-1">联系客服</view>
+    </button>
+  </view>
+</view>

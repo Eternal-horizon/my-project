@@ -1,0 +1,46 @@
+
+/**app.wxss**/
+view,scroll-view,swiper,icon,text,progress,
+input,button,textarea,checkbox,form,
+label,picker,picker-view,radio,slider,swich,
+navigator,audio,image,video,
+map,canvas,contact-button{
+margin:0;
+padding:0;
+box-sizing: border-box;
+vertical-align:baseline;
+}
+page{background:#f5f5f5;}
+.container{color: #333;font-size:28rpx;line-height: 1;margin:0 auto; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;}
+.container{-webkit-user-select:none;user-select:none;}
+image {border:none;height:auto;vertical-align:middle;max-width:100%;}
+input, button,textarea {border:0;outline:none;background:none; -webkit-appearance:none;font-size:28rpx;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { line-height:normal;font-size:28rpx;color: #bbb;}                                                                                                                                                                                  textarea {resize:none;}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; -webkit-appearance: none; -moz-appearance: textfield; }
+button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0)}
+/*常用样式*/
+.scroll{-webkit-overflow-scrolling: touch;overflow-y:scroll;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:'';clear:both;height:0;}
+.table{display:table;}
+.table-cell{display: table-cell;vertical-align:middle;}
+.flex{display:flex;}
+.flex-v{flex-direction:column;}
+.flex-1{flex:1;}
+.flex-align-center{align-items:center;}
+.flex-pack-justify{justify-content:space-between;}
+.bg{background:#f2f2f2;}
+.pop-bg{position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);}
+.none{display:none;}
+.flex-justify{display:flex;align-items:center;justify-content:space-between;}
+.flex-align{display:flex;align-items:center;}
+.flex-flow{display:flex;flex-direction:row;flex-wrap: wrap;justify-content:space-between;}
+
+.fixed{width:100%;height:100rpx;}
+.foot-nav{position:fixed;bottom:0;left:0;width:100%;background:#fff;border-top:1px solid #dfdfdf;padding: 11rpx 0 6rpx;}
+.nav{width:25%;text-align:center;color:#a1a1a1;}
+.nav image{width:43rpx;height:40rpx;margin-bottom: 15rpx;}
+.nav view{font-size: 20rpx;}
+.foot-nav .hover{color: #333;}
+.back{background-repeat: no-repeat;background-position: center;background-size:cover;}
+
+.scroll {position:absolute;left:0;width:100%;height:100%;top:0;}

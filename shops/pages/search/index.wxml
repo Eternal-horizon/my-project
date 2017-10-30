@@ -1,0 +1,18 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <input type="text" bindinput="search_text" placeholder="寻一寻理想产品" />
+    <image bindtap="search" src="../../images/search.png"></image>
+  </view>
+  <view class="flex-flow good-wrap">
+    <block wx:for="{{new_goods}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+      <navigator url="../commodity-details/index?id={{item.id}}" class="goods-list">
+        <image class="goods-img" src="{{api_url}}{{item.img}}"></image>
+        <view class="goods-title">{{item.name}}</view>
+        <text class="goods-tips">{{item.title}}</text>
+      </navigator>
+    </block>
+  </view>
+  <view class="fixed"></view>
+</view>

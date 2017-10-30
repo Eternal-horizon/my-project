@@ -1,0 +1,17 @@
+page{display: block;}
+.container{}
+.goods-head{}
+.search{padding:22rpx 25rpx;background: #fff;}
+.search view{position:relative;}
+.search input{height:60rpx;padding-left:63rpx;font-size: 24rpx;color: #b2b2b2;background: #f5f5f5;border-radius: 3px;}
+.search image{position: absolute;width:28rpx;height:28rpx;left:21rpx;top:16rpx;}
+.topic-banner{width:100%;height:381rpx;}
+.goods-wrap{padding:25rpx 25rpx 0;}
+.goods-list{width:220rpx;margin-bottom:40rpx;margin-right:15rpx;}
+.goods-img{width:100%;height:220rpx;background-repeat: no-repeat;background-position: center;background-size:cover;}
+.goods-title{margin-top:19rpx;font-size:24rpx;color:#000;}
+.goods-tips{font-size:20rpx;color: #a1a1a1;margin: 10rpx 0 15rpx;}
+.goods-price{font-size: 24rpx;color: #b21e1e;}
+.load{color:#c7c7c7 ;text-align: center;font-size:20rpx;padding-bottom:150rpx;}
+.goods-head{margin-top:58rpx;padding-left:25rpx;}
+.flex-flows{display:flex;flex-direction:row;flex-wrap:wrap;}

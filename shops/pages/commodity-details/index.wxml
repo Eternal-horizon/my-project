@@ -1,0 +1,120 @@
+<!--index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <swiper autoplay="autoplay" class="detail-banner">
+    <block wx:for="{{detail.img_list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+      <swiper-item>
+        <image src="{{api_url}}{{item.img}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="product-description">
+    <view class="product-name">{{detail.name}}</view>
+    <view class="product-subtitle">{{detail.title}}</view>
+    <text>{{detail.show_price}}</text>
+  </view>
+  <view class="detail-main">
+    <view class="detail-tab flex-align">
+      <view class="{{bool1?'hover':''}}" data-name="细节描述" bindtap="tab">细节描述</view>
+      <view class="{{bool2?'hover':''}}" bindtap="tab" data-name="产品参数">产品参数</view>
+    </view>
+    <!--<image src="../../images/introduction.jpg"></image>-->
+  </view>
+  <view wx:if="{{condition1}}">
+    <view class="introduction">
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+
+    <view class="guess">
+      <view class="guess-title">猜你喜欢</view>
+      <scroll-view scroll-x class="detail-goods">
+        <block wx:for="{{love_goods}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+          <navigator url="../commodity-details/index?id={{item.id}}" class="love-list">
+            <image class="detail-img" src="{{api_url}}{{item.img}}"></image>
+            <view class="detail-tit">{{item.name}}</view>
+            <view class="detail-tips">{{item.title}}</view>
+            <text>￥{{item.price.price}}</text>
+          </navigator>
+        </block>
+
+      </scroll-view>
+    </view>
+  </view>
+  <view wx:if="{{condition2}}"></view>
+  <view class="fixed"></view>
+  <view class="fix flex-align">
+    <button open-type="contact" class="service">
+      <image src="../../images/service.png"></image>
+      <text>客服</text>
+    </button>
+    <view bindtap="to_cart" class="cart">
+      <image src="../../images/join.png"></image>
+      <text>购物车</text>
+      <view>{{shopnum}}</view>
+    </view>
+    <view class="join" bindtap="add_cart">加入购物车</view>
+    <view class="buy" bindtap="confirm">立即购买</view>
+  </view>
+</view>
+<!--index.wxml-->
+<view class="bg" bindtap="hide" wx:if="{{is_show}}"></view>
+<view class="main" wx:if="{{cart_show}}">
+  <view class="clearfix product">
+    <image class="product-img" src="{{api_url}}{{detail.img}}"></image>
+    <view class="product-main">
+      <view class="product-title">{{detail.name}}</view>
+      <view class="product-name">{{detail.title}}</view>
+      <text>￥{{detail.show_price}}</text>
+    </view>
+  </view>
+  <block wx:for="{{detail.key}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+    <view class="specifications">
+      <view class="specifications-name">{{item.color_name}}</view>
+      <view class="size flex-align">
+        <block wx:for-index="ind" wx:for="{{item.color_detail}}" wx:for-item="it">
+          <view bindtap="addSpec" data-key="{{index}}" data-value="{{it}}" class="{{item.checkobj == it?'hover':''}}">{{it}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+  <view class="flex-justify num">
+    <text>购买数量：</text>
+    <view class="num-btn flex-align">
+      <view bindtap="reduce">-</view>
+      <input type="text" bindinput="check_nums" value="{{num}}" maxlength='4' />
+      <view bindtap="add">+</view>
+    </view>
+  </view>
+  <view class="fixed"></view>
+  <view bindtap="save_cart" data-gid="{{gid}}" data-goods_id="{{detail.id}}" data-name="{{detail.name}}" data-title="{{detail.title}}" data-image="{{api_url}}{{detail.img}}" data-price="{{cur_price}}" class="add-cart">加入购物车</view>
+</view>
+<view class="main" wx:if="{{buy_show}}">
+  <view class="clearfix product">
+    <image class="product-img" src="{{api_url}}{{detail.img}}"></image>
+    <view class="product-main">
+      <view class="product-title">{{detail.name}}</view>
+      <view class="product-name">{{detail.title}}</view>
+      <text>￥{{detail.show_price}}</text>
+    </view>
+  </view>
+  <block wx:for="{{detail.key}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+    <view class="specifications">
+      <view class="specifications-name">{{item.color_name}}</view>
+      <view class="size flex-align">
+        <block wx:for-index="ind" wx:for="{{item.color_detail}}" wx:for-item="it">
+          <view bindtap="addSpec" data-key="{{index}}" data-value="{{it}}" class="{{item.checkobj == it?'hover':''}}">{{it}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+  <view class="flex-justify num">
+    <text>购买数量：</text>
+    <view class="num-btn flex-align">
+      <view bindtap="reduce">-</view>
+      <input type="text" bindinput="check_nums" value="{{num}}" maxlength='4' />
+      <view bindtap="add">+</view>
+    </view>
+  </view>
+  <view class="fixed"></view>
+  <view class="confirm" bindtap="payNow" data-gid="{{gid}}" data-goods_id="{{detail.id}}" data-name="{{detail.name}}" data-title="{{detail.title}}" data-image="{{api_url}}{{detail.img}}" data-price="{{cur_price}}">确认购买</view>
+</view>

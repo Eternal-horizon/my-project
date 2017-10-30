@@ -1,0 +1,5 @@
+.no-address{padding:120rpx 0 66rpx;color:#a1a1a1;font-size:26rpx;text-align: center;}
+.no-address view{margin-bottom:14rpx;}
+.add-btn{width:93.33%;height:90rpx;line-height:90rpx;margin:0 auto;border-radius:3px;font-size:28rpx;text-align: center;background: #fff;}
+.add-btn image{width:30rpx;height:30rpx;margin-right:8rpx;vertical-align: -5rpx;}
+.add-btn text{display: inline-block;vertical-align: middle;}

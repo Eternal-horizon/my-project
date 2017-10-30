@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="address" wx:for="{{list}}" wx:key="{{item}}">
+    <scroll-view scroll-x class="scroll-del">
+      <view class="address-list">
+        <view class="address-main flex-align">
+          <icon wx:if="{{item.is_default==1}}" type="success" size="20" color="#000" />
+          <view class="info flex-1" data-id="{{item.id}}" bindtap="shop_address">
+            <view class="info-name">{{item.receiver}}</view>
+            <view class="flex-justify warn">
+              <view>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</view>
+              <image data-id="{{item.id}}" bindtap="edit" src="../../images/warn.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="del" bindtap="del" data-id="{{item.id}}">
+        <image src="../../images/del.png" />
+      </view>
+    </scroll-view>
+  </view>
+  <navigator url="../add-address/index" class="add">
+    <image src="../../images/add.png" />新增地址</navigator>
+</view>

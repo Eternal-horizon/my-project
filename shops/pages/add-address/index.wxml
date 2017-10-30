@@ -1,0 +1,64 @@
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="address-area">
+      <view class="area-list flex">
+        <image src="../../images/user.png" />
+        <view class="flex-1">
+          <text>收货人：</text>
+          <input wx:if="{{id>0}}" hidden="true" name="id" value="{{id}}" />
+          <input type="text" name="receiver" value="{{detail.receiver}}" />
+        </view>
+      </view>
+      <view class="area-list flex">
+        <image src="../../images/phone.png" class="phone" />
+        <view class="flex-1">
+          <text>手机号：</text>
+          <input type="text" name="mobile" value="{{detail.mobile}}" />
+        </view>
+      </view>
+    </view>
+    <view class="area">
+      <view class="area-list area-list1 flex">
+        <image src="../../images/address.png" />
+        <view class="address-details flex-1">
+          <view class="flex address-info">
+            <input wx:if="{{!detail.province}}" type="text" name="address_all" value="{{province}}-{{city}}-{{county}}" bindfocus="open" />
+            <input wx:if="{{detail.province}}" type="text" name="address_all" value="{{detail.province}}-{{detail.city}}-{{detail.area}}" bindfocus="open" />
+            <image src="../../images/down.png"></image>
+          </view>
+          <textarea name="address" placeholder="填写详细地址" value="{{detail.address}}" />
+        </view>
+      </view>
+    </view>
+    <view class="defaultp-address">
+      <view class="flex-align set" bindtap="setDefault">
+        <icon type="success" size="20" color="{{term?'#c7c7c7':'#000'}}" /> 设为默认地址
+        <checkbox-group name="is_default">
+          <checkbox value="1" wx:if="{{detail.is_default!=1}}" />
+          <checkbox value="1" wx:if="{{detail.is_default==1}}" checked="true" />
+        </checkbox-group>
+      </view>
+      <button formType="submit">保存地址</button>
+    </view>
+    <view wx:if="{{condition}}" class="citypicker">
+      <picker-view indicator-style="height: 50px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+          <view bindtap="open" class="city-cancel">取消</view>
+          <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</form>
+<view class="pop-wrap" wx:if="{{is_show}}">
+  <view class="pop">{{show_text}}</view>
+</view>

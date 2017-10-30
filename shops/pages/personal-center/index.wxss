@@ -1,0 +1,14 @@
+.info-main{padding: 60rpx 0 40rpx;padding-right:52rpx;background: #fff;}
+.info{padding:5rpx 0;border-left:12rpx solid #000;padding-left:76rpx;}
+.info view{margin-bottom:6rpx;font-size: 42rpx;color: #000;}
+.info text{color: #a1a1a1;font-size: 20rpx;}
+.user{width:120rpx;height:120rpx;border-radius:50%;background-repeat: no-repeat;background-position: center;background-size: cover;}
+.link-nav{margin-top:17rpx;background: #fff;}
+.nav-list{height:105rpx;line-height:105rpx;padding-left:25rpx;}
+.nav-list{line-height:105rpx;height:105rpx;border-radius:0;}
+.nav-list::after {width:0;height:0;}
+.nav-list image{width:33rpx;height:44rpx;margin:30.5rpx 30rpx 0 0;}
+.nav-list view{text-align: left;}
+.nav-list .address{width:32rpx;height:40rpx;}
+.order view{border-bottom:1px solid #dfdfdf;}
+.my-order image{width:34rpx;height:36rpx;margin:34.5rpx 30rpx 0 0;}

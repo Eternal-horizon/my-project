@@ -1,0 +1,27 @@
+<view class="container">
+    <view class="shop">
+        <image src="../../images/shopping-cart.png" ></image>
+        <view class="">您的购物车里没有商品</view>
+        <view class="">快去商城逛逛吧！</view>
+        <navigator url="">去商城逛逛</navigator>
+    </view> 
+    <view class="fixed"></view>
+    <view class="foot-nav flex-align">
+        <navigator url="../index/index" class="nav">
+            <image src="../../images/home-hover.png" ></image>
+            <view>首页</view>
+        </navigator>
+        <navigator url="../goods-class/index" class="nav">
+            <image src="../../images/classification.png" ></image>
+            <view>分类</view>
+        </navigator>
+        <navigator url="../shopping-total/index" class="nav hover">
+            <image src="../../images/car-hover.png" ></image>
+            <view>购物车</view>
+        </navigator>
+        <navigator url="../personal-center/index" class="nav">
+            <image src="../../images/user.png" ></image>
+            <view>我的</view>
+        </navigator>
+    </view>       
+</view>

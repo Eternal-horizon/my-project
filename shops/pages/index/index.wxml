@@ -1,0 +1,66 @@
+<view class="container">
+  <scroll-view bindscroll="scroll" scroll-y class="scroll {{scrollTop>625? 'topnav' : ''}}">
+    <swiper class="banner" indicator-dots="true" indicator-color="#d7dee4" indicator-active-color="#000">
+      <block wx:for="{{banner}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <swiper-item>
+          <image src="{{api_url}}{{item.img}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="search">
+      <view bindtap="search">
+        <input disabled="true" type="text" placeholder="搜索" placeholder-style="margin:0 auto;" />
+        <image src="../../images/search.png" />
+      </view>
+    </view>
+    <view class="new">
+      <view class="flex-justify new-title">
+        <text>新品上架</text>
+        <navigator url="../goods-class/index">全部
+          <image class="goods-img" src="../../images/right.png"></image>
+        </navigator>
+      </view>
+      <scroll-view scroll-x class="goods-wrap">
+        <block wx:for="{{new_goods}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <navigator url="../commodity-details/index?id={{item.id}}" class="goods-list">
+              <image class="goods-img" src="{{api_url}}{{item.img}}"></image>
+              <view class="goods-title">{{item.name}}</view>
+              <view class="goods-tips">{{item.title}}</view>
+              <text class="goods-price">￥{{item.price.price}}</text>
+            </navigator>
+        </block>
+        
+      </scroll-view>
+    </view>
+    <view class="theme">
+      <view class="theme-title">Midun主题馆</view>
+      <scroll-view scroll-x class="theme-wrap">
+        <block wx:for="{{theme}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+          <navigator url="../theme1/index?id={{item.id}}">
+            <image src="{{api_url}}{{item.img}}"></image>
+          </navigator>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="goods">
+      <view class="goods-tab">
+        <scroll-view scroll-x>
+          <view class="{{show?'hover':''}}" bindtap="changeAll">热销推荐</view>
+          <block wx:for="{{classify}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <view  class="{{currentItem==item.id&&show_class?'hover':''}}" bindtap="changeClassify" data-id="{{item.id}}">{{item.name}}</view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="goods-main flex-flow">
+        <block wx:for="{{goods}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <navigator url="../commodity-details/index?id={{item.id}}" class="goods-list">
+              <image class="goods-img" src="{{api_url}}{{item.img}}"></image>
+              <view class="goods-title">{{item.name}}</view>
+              <view class="goods-tips">{{item.title}}</view>
+              <text class="goods-price">￥{{item.price.price}}</text>
+            </navigator>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>

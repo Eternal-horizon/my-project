@@ -1,0 +1,8 @@
+
+ {
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "midun商城展示版",
+  "navigationBarBackgroundColor": "#ffffff",
+  "backgroundColor": "#fff",
+  "enablePullDownRefresh": false
+}

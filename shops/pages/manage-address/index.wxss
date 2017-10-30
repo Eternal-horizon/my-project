@@ -1,0 +1,15 @@
+.address{margin-top:10rpx;background: #fff;}
+.address-main{width:750rpx;padding: 40rpx 0 0  25rpx;}
+.address-main icon{margin-right:28rpx;}
+.info{padding-bottom:40rpx;border-bottom: 1px solid #dfdfdf;}
+.info-name{font-size: 28rpx;color: #000;}
+.warn{margin-top:10rpx;padding-right:25rpx;}
+.warn view{width:465rpx;white-space:normal;color: #a1a1a1;font-size: 22rpx;line-height: 1.5;}
+.warn image{width:54rpx;height:54rpx;}
+.del{display:inline-block;vertical-align: top;width:190rpx;background: #000;height:184rpx;line-height: 170rpx;text-align: center;}
+.del image{width:49rpx;height:47rpx;}
+.scroll-del{font-size: 0;white-space: nowrap;height:184rpx;}
+.scroll-del:last-child .info{border-bottom:0;}
+.address-list{display:inline-block;vertical-align: top;}
+.add{display:block;padding-left:25rpx;margin-top:10rpx;height:100rpx;line-height: 100rpx;background: #fff;}
+.add image{width:30rpx;height:30rpx;margin-right:25rpx;}

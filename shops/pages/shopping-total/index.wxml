@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="shopping-tips {{cartList[0] ? 'none' : ''}}">
+    <image src="../../images/shopping-tips.png"></image>
+    <view>您的购物车暂时还有商品哦，</view>
+    <view class="shop-btn">赶快去购买吧！</view>
+    <navigator url="../index/index" open-type="switchTab">返回首页</navigator>
+  </view>
+  <view>
+    <block wx:for="{{cartList}}" wx:key="item">
+      <scroll-view scroll-x class="scroll-del">
+        <view class="address-list">
+          <view class="address-main flex-align">
+            <icon wx:if="{{item.checks}}" type="success" size="20" bindtap="bindCheckbox" data-checks="{{item.checks}}" data-index="{{item.gid}}" class="my-check" />
+            <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{item.gid}}" data-checks="{{item.checks}}" class="my-check" />
+            <view class="info flex-1">
+              <view class="flex-align">
+                <image class="goods-img" src="{{item.image}}"></image>
+                <view class="flex-1">
+                  <navigator url="../commodity-details/index?shopp_id={{item.gid}}&id={{item.goods_id}}" class="goods-list">
+                    <view class="info-name">{{item.name}}{{item.gid}}</view>
+                    <view class="info-description">{{item.title}}</view>
+                    <view class="info-description">{{item.spec}}</view>
+                  </navigator>
+                  <view class="clearfix price">
+                    <text>￥{{item.price}}</text>
+
+                    <view class="input flex-align">
+                      <view bindtap="decrease" data-index="{{item.gid}}" data-num="{{item.num}}">-</view>
+                      <input disabled bindinput="check_nums" type="number" maxlength='4' value="{{item.num}}" />
+                      <view bindtap="increase" data-index="{{item.gid}}" data-num="{{item.num}}">+</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+            </view>
+          </view>
+        </view>
+        <view class="del">
+          <image src="../../images/del.png" bindtap="delete" data-index="{{item.gid}}" />
+        </view>
+      </scroll-view>
+    </block>
+    <view class="fixed flex-justify">
+      <view bindtap="selectAll" class="flex-1 all-select">
+        <icon wx:if="{{selectAll}}" type="success_circle" class="1-mycheck" size="20" color="#c7c7c7" />
+        <icon wx:else type="circle" size="20" class="l-mycheck" />
+        <text>全选</text>
+      </view>
+      <view class="total-price">
+        合计：
+        <text>￥{{total ? total : 0}}</text>
+      </view>
+      <view class="settlement" bindtap="payNow">结算</view>
+    </view>
+  </view>
+</view>

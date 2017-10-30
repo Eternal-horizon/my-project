@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="flex-align order-nav">
+        <navigator url="../my-order/index"><text>全部</text></navigator>
+        <navigator url="../my-order-payment/index"><text>待付款</text></navigator>
+        <navigator url="../my-order-deliver/index"><text>待发货</text></navigator>
+        <navigator url="../my-order-receipt/index" class="hover"><text>待收货</text></navigator>
+        <navigator url="../my-order-evaluate/index"><text>待评价</text></navigator>
+    </view>
+     <view wx:if="{{condition}}" class="no-order">
+        <view>您还没有待收货订单，去逛逛吧！</view>
+        <navigator url="">去逛商城</navigator>
+    </view>
+    <view class="order-main" >
+        <view class="order-list"  wx:for-items="{{list}}">
+            <view class="order-top">
+                <view class="flex-justify order-state">
+                    <view>订单状态</view>
+                    <text wx:if="{{item.status == 1}}">待付款</text>
+                    <text wx:if="{{item.status == 2}}">待发货</text>
+                    <text wx:if="{{item.status == 3}}">待收货</text>
+                    <text wx:if="{{item.status == 4}}">待评价</text>
+                    <text wx:if="{{item.status == 5}}">已完成</text>
+                </view>
+                <view class="flex order-main"  wx:for-items="{{item.goods}}" wx:for-item="items">
+                    <image class="order-goods" src="{{items.goods_image}}"></image>
+                    <view class="flex-1">
+                        <view class="clearfix order-head">
+                            <view class="order-name">{{items.goods_name}}</view>
+                            <text class="order-price">￥{{items.goods_price}}</text>
+                        </view>
+                        <view class="clearfix order-title">
+                            <view class="order-tit">{{items.goods_title}}</view>
+                            <text class="order-num">* {{items.number}}</text>
+                        </view>
+                        <view class="order-specs">{{items.spec_name}}</view>
+                    </view>     
+                </view>
+            </view>
+            <view class="flex-justify order-payment">
+                <view class="">实付款<text>  ￥{{item.total}}</text></view>
+                <view class="order-link">
+                    <navigator class="order-logistics">查看物流</navigator>
+                    <navigator class="order-receipt" data-order-id="{{item.id}}" bindtap="receipt">确认收货</navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,51 @@
+<view class="container">
+  <navigator url="" bindtap="address_url">
+    <view class="add-head flex-align">
+      <block wx:if="{{has_address}}">
+        <view class="address-name">
+          <text>{{order_list.receiver}}</text> {{order_list.phone}}</view>
+        <view class="address">{{order_list.address}}</view>
+      </block>
+      <block wx:if="{{!has_address}}">
+        <image src="../../images/address.png"></image>
+        <text>添加地址</text>
+        <view class="flex-1">
+          <image src="../../images/right.png"></image>
+        </view>
+      </block>
+    </view>
+  </navigator>
+  <view class="address-main">
+    <block wx:for="{{goods_list}}"  wx:for-item="item">
+       <view class="order-list">
+        <view class="order-address">
+          <view class="flex order-address-main">
+            <image class="product" src="{{item.goods_image}}"></image>
+            <view class="flex-1 product-main">
+              <view class="clearfix product-tips1">
+                <text>{{item.goods_name}}</text>
+                <text>￥{{item.goods_price}}</text>
+              </view>
+              <view class="clearfix product-tips2">
+                <text>{{item.goods_title}}</text>
+                <text>* {{item.number}}</text>
+              </view>
+              <view>{{item.spec_name}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="message flex">
+          <text>留言</text>
+          <textarea class="flex-1" maxlength="45" placeholder="给商家的留言(45字以内)"></textarea>
+        </view>
+      </view> 
+    </block>
+  </view>
+  <view class="fixed"></view>
+  <view class="flex-justify pay">
+    <view class="pay-price flex-1">实付款：
+      <text>￥{{order_list.total}}</text>
+    </view>
+    <view  class="nav" bindtap="pay" data-address="{{order_list.receiver}}">微信支付</view>
+  </view>
+</view>

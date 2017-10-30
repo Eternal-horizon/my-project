@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class="container">
+<view>
+    <scroll-view scroll-x class="scroll-del">
+        <view class="address-list">
+            <view class="address-main flex-align">
+                <icon type="success" size="20" color="#000"/>
+                <view class="info flex-1">
+                    <view class="flex-align" >
+                        <image class="goods-img" src="../../images/goods1.jpg"></image>
+                        <view class="flex-1">
+                            <view class="info-name">产品名称显示在此处</view>
+                            <view class="info-description">产品副标题描述</view>  
+                            <view class="clearfix price">
+                                <text>￥158</text>
+                                <view class="input flex-align">
+                                    <view bindtap="reduce">-</view>
+                                    <input type="text"  bindinput="check_nums" value="{{num}}"/>
+                                    <view bindtap="add">+</view>
+                                </view>
+                            </view> 
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="del">
+            <image src="../../images/del.png" />
+        </view>      
+   </scroll-view>
+   <scroll-view scroll-x class="scroll-del">
+        <view class="address-list">
+            <view class="address-main flex-align">
+                <icon type="success" size="20" color="#000"/>
+                <view class="info flex-1">
+                    <view class="flex-align" >
+                        <image class="goods-img" src="../../images/goods1.jpg"></image>
+                        <view class="flex-1">
+                            <view class="info-name">产品名称显示在此处</view>
+                            <view class="info-description">产品副标题描述</view>  
+                            <view class="clearfix price">
+                                <text>￥158</text>
+                                <view class="input flex-align">
+                                    <view>-</view>
+                                    <input type="text" value="1"/>
+                                    <view>+</view>
+                                </view>
+                            </view> 
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="del">
+            <image src="../../images/del.png" />
+        </view>      
+   </scroll-view>
+   <scroll-view scroll-x class="scroll-del">
+        <view class="address-list">
+            <view class="address-main flex-align">
+                <icon type="success" size="20" color="#c7c7c7"/>
+                <view class="info flex-1">
+                    <view class="flex-align" >
+                        <image class="goods-img" src="../../images/goods1.jpg"></image>
+                        <view class="flex-1">
+                            <view class="info-name">产品名称显示在此处</view>
+                            <view class="info-description">产品副标题描述</view>  
+                            <view class="clearfix price">
+                                <text>￥158</text>
+                                <view class="input flex-align">
+                                    <view>-</view>
+                                    <input type="text" value="1"/>
+                                    <view>+</view>
+                                </view>
+                            </view> 
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="del">
+            <image src="../../images/del.png" />
+        </view>      
+   </scroll-view>
+   </view>   
+   <view class="fixed flex-justify">
+        <view class="flex-1 flex-justify all-select-main">
+            <view class="flex-1 all-select">
+                <icon type="success" size="20" color="#c7c7c7"/><text>全选</text>
+            </view>
+            <view class="total-price">
+                合计：<text>￥0</text>
+            </view>
+        </view>     
+        <view class="settlement">结算</view>
+   </view>
+   <view class="fix"></view>
+    
+</view>

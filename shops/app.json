@@ -1,0 +1,65 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/personal-center/index",
+    "pages/goods-class/index",
+    "pages/theme1/index",
+    "pages/theme2/index",
+    "pages/theme3/index",
+    "pages/search/index",
+    "pages/goods-search/index",
+    "pages/shopping-cart/index",
+    "pages/my-order/index",
+    "pages/commodity-details/index",
+    "pages/add-address/index",
+    "pages/no-address/index",
+    "pages/confirm-order/index",
+    "pages/manage-address/index",
+    "pages/shopping-total/index",
+    "pages/my-order-deliver/index",
+    "pages/my-order-payment/index",
+    "pages/my-order-receipt/index",
+    "pages/my-order-evaluate/index",
+    "pages/shopping-total-details/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "掌心餐饮",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333",   
+    "backgroundColor": "#fff",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-hover.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/search/index",
+      "iconPath": "images/classification.png",
+      "selectedIconPath": "images/classification-hover.png",
+      "text": "分类"
+    }, {
+      "pagePath": "pages/shopping-total/index",
+      "iconPath": "images/join.png",
+      "selectedIconPath": "images/car-hover.png",
+      "text": "购物车"
+    }, {
+      "pagePath": "pages/personal-center/index",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/user-hover.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

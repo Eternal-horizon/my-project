@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="no-address">
+        <view>您还没有添加收货地址</view>
+        <view>赶紧新增一个吧！</view>
+    </view>
+    <navigator url="../add-address/index" class="add-btn"><image src="../../images/add.png"></image><text>新增地址</text></navigator>
+</view>

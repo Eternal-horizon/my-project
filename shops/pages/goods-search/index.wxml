@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="search">
+        <view>
+            <input bindinput="search_text" type="text" placeholder="寻一寻理想产品"/>
+            <image bindtap="search" src="../../images/search.png"></image>
+        </view>
+    </view>  
+    <view class="goods-head">大家都在寻：</view> 
+    <view class="flex-flows goods-wrap">
+    <block wx:for="{{love_goods}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <navigator url="../commodity-details/index?id={{item.id}}" class="goods-list">
+            <image class="goods-img" src="{{api_url}}{{item.img}}"></image>
+            <view class="goods-title">{{item.name}}</view>
+            <view class="goods-tips">{{item.title}}</view>
+            <text class="goods-price">￥{{item.price.price}}</text>
+        </navigator>        
+    </block>   
+    </view>
+   
+</view>

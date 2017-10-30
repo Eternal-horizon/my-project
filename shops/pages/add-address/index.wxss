@@ -1,0 +1,163 @@
+.address-area {
+  padding: 30rpx 0 0 25rpx;
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+
+.area-list {
+  padding-top: 40rpx;
+}
+
+.area-list input {
+  height: 30rpx;
+}
+
+.area-list image {
+  width: 32rpx;
+  height: 37rpx;
+}
+
+.area-list>view {
+  margin: 5rpx 0 0 25rpx;
+  padding: 0 0 10rpx;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.area-list1>view {
+  margin: -6rpx 0 0 25rpx;
+}
+
+.area-list:last-child view {
+  border-bottom: 0;
+}
+
+.area-list .phone {
+  width: 24rpx;
+  height: 40rpx;
+}
+
+.area {
+  background: #fff;
+  padding: 0 0 0 25rpx;
+  margin-bottom: 10rpx;
+}
+
+.address-details textarea {
+  display: block;
+  width: 100%;
+  height: 200rpx;
+  padding-top: 30rpx;
+}
+
+.defaultp-address {
+  padding: 40rpx 25rpx 0;
+  background: #fff;
+}
+
+.defaultp-address view {
+  margin-bottom: 50rpx;
+}
+
+.set {
+  position: relative;
+}
+
+.set checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.defaultp-address icon {
+  margin-right: 25rpx;
+}
+
+.defaultp-address button {
+  display: block;
+  width: 93.3%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background: #000;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.address-details picker {
+  font-size: 26rpx;
+  padding-bottom: 36rpx;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.address-info input {
+  width: 90%;
+  height: 30rpx;
+}
+
+.address-info image {
+  width: 18rpx;
+  height: 18rpx;
+  margin: 16rpx 25rpx 0 0;
+}
+
+.citypicker {
+  border-top: 1px solid #000;
+}
+
+.pop {
+  margin-top: 60%;
+  display: inline-block;
+  min-width: 30%;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.pop-wrap {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.citybody {
+  position: fixed;
+  width: 100%;
+  height: 400rpx;
+  bottom: 0px;
+  z-index: 100;
+  background: #f2f2f2;
+}
+
+.cityheader {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 4;
+  background: #fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2fb42e;
+}
